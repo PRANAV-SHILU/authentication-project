@@ -1,6 +1,33 @@
 import { NavLink, useRouteLoaderData } from "react-router-dom";
 import "../assets/css/home.css";
 
+const keyFeatures = [
+  "User Registration and Login",
+  "Protected Dashboard Routes",
+  "Edit User Details",
+  "Query String Handling",
+  "Schema-based Form Validation",
+  "Toast Notifications and Loaders",
+  "Multi-user API State Handling",
+];
+
+const techStack = [
+  "React JS",
+  "React Router DOM",
+  "React Hook Form + Yup",
+  "JSON Server (Self-made REST API)",
+  "React Toastify and React Spinners",
+];
+
+const authenticationFlow = [
+  "User registers through the API",
+  "Credentials are validated during login",
+  "Authentication state controls route access",
+  "Protected routes restrict unauthenticated users",
+  "Logout updates session state on the client",
+  "User profile changes sync with the API",
+];
+
 export default function Home() {
   const authData = useRouteLoaderData("root");
   const name = authData?.name;
@@ -20,36 +47,27 @@ export default function Home() {
       <div className="home-block">
         <h3>Key Features</h3>
         <ul>
-          <li>User Registration and Login</li>
-          <li>Protected Dashboard Routes</li>
-          <li>Edit User Details</li>
-          <li>Query String Handling</li>
-          <li>Schema-based Form Validation</li>
-          <li>Toast Notifications and Loaders</li>
-          <li>Multi-user API State Handling</li>
+          {keyFeatures.map((feature, index) => (
+            <li key={index}>{feature}</li>
+          ))}
         </ul>
       </div>
 
       <div className="home-block">
         <h3>Tech Stack</h3>
         <ul>
-          <li>React JS</li>
-          <li>React Router DOM</li>
-          <li>React Hook Form + Yup</li>
-          <li>JSON Server (Self-made REST API)</li>
-          <li>React Toastify and React Spinners</li>
+          {techStack.map((tech, index) => (
+            <li key={index}>{tech}</li>
+          ))}
         </ul>
       </div>
 
       <div className="home-block">
         <h3>Authentication Flow</h3>
         <ol>
-          <li>User registers through the API</li>
-          <li>Credentials are validated during login</li>
-          <li>Authentication state controls route access</li>
-          <li>Protected routes restrict unauthenticated users</li>
-          <li>Logout updates session state on the client</li>
-          <li>User profile changes sync with the API</li>
+          {authenticationFlow.map((step, index) => (
+            <li key={index}>{step}</li>
+          ))}
         </ol>
       </div>
 
@@ -65,8 +83,8 @@ export default function Home() {
       <div className="home-cta">
         <p>
           <NavLink to="/login"> Log in </NavLink> or{" "}
-          <NavLink to="/register"> register </NavLink> to explore authenticated features and understand
-          practical frontend authentication workflows.
+          <NavLink to="/register"> register </NavLink> to explore authenticated
+          features and understand practical frontend authentication workflows.
         </p>
       </div>
     </section>

@@ -56,7 +56,8 @@
 
 .home-block ul,
 .home-block ol {
-  padding-left: 18px;
+  display: block;
+  padding: 10px 0 0 18px;
   color: #9ba4b5;
 }
 
