@@ -1,9 +1,18 @@
 html {
   scroll-behavior: smooth;
 }
+body {
+  background-color: #0b0f14;
+}
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+.container {
+  padding-top: 60px;
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 96%;
 }
