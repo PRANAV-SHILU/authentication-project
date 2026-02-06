@@ -6,6 +6,7 @@ import {
   NavLink,
 } from "react-router-dom";
 import { toast } from "react-toastify";
+import "../assets/css/dashboard.css";
 
 export default function Dashboard() {
   const user = useLoaderData(); // fetched from userLoader loader
@@ -26,11 +27,11 @@ export default function Dashboard() {
   if (!user) return <h1>Loading user data...</h1>;
 
   return (
-    <section style={{ textAlign: "center", padding: "2rem" }}>
+    <section className="dashboard">
       <h1>Dashboard</h1>
       <h2>Welcome {user.name}!</h2>
 
-      <div style={{ margin: "2rem 0" }}>
+      <div>
         <p>
           <strong>Name:</strong> {user.name}
         </p>
@@ -42,8 +43,8 @@ export default function Dashboard() {
         </p>
       </div>
 
-      <div style={{ display: "flex", justifyContent: "center", gap: "1rem" }}>
-        <NavLink to='/edit'>
+      <div className="dashboard-links">
+        <NavLink to="/edit">
           <button>Edit Details</button>
         </NavLink>
 

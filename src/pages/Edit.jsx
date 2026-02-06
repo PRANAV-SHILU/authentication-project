@@ -31,10 +31,9 @@ export default function Edit() {
   });
 
   return (
-    <section style={{ textAlign: "center", padding: "2rem" }}>
-      <h1>Edit Your Details</h1>
-
+    <section className="login-section">
       <Form method="post" className="form">
+        <h1>Edit Your Details</h1>
         <div className="input-container">
           <label>Name:</label>
           <input type="text" {...register("name")} />
@@ -59,9 +58,11 @@ export default function Edit() {
           <p className="errorMSG">{errors.confirmPassword?.message}</p>
         </div>
 
-        <button type="submit" disabled={!isValid}>
-          Update
-        </button>
+        <div className="input-container">
+          <button type="submit" disabled={!isValid}>
+            Update
+          </button>
+        </div>
       </Form>
     </section>
   );

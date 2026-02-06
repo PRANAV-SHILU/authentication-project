@@ -2,7 +2,6 @@ import { registerSchema } from "../utils/RegisterSchema";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Form, NavLink } from "react-router-dom";
-import "../assets/css/login.css";
 import { useActionData } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useEffect } from "react";

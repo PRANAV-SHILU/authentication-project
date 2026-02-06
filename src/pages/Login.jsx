@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { toast } from "react-toastify";
 import { NavLink } from "react-router-dom";
-import "../assets/css/login.css";
+import "../assets/css/form.css";
 import { loginSchema } from "../utils/loginSchema";
 
 export default function Login() {

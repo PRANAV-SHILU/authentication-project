@@ -98,7 +98,7 @@
 }
 
 /* Register link text */
-section h3 {
+.login-section h3 {
   margin-top: 18px;
   text-align: center;
   font-size: 14px;
